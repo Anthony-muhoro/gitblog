@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Everyday Git</title>
+  </head>
+  <body>
+    <h1><u>Everyday Git</u></h1>
+
+    <section>
+      <h2>What is Git</h2>
+      <p>
+        Git is a distributed version control system. A version control system
+        helps track changes in source code during software development. It
+        allows multiple developers to collaborate efficiently.
+      </p>
+      <p>
+        Other version control systems include SVN, Mercurial, and Perforce. This
+        blog focuses on Git and GitHub.
+      </p>
+      <a href="https://git-scm.com/doc" target="_blank">Git Documentation</a>
+    </section>
+
+    <section>
+      <h2>Installing Git</h2>
+      <p>Check if Git is installed:</p>
+      <code>git --version</code>
+      <p>
+        <img
+          src="images/git-version.png"
+          alt="Command to check git version"
+          width="500px"
+          title="check if git is installed"
+        />
+      </p>
+      <p>To install Git:</p>
+      <ul>
+        <li>
+          <a href="https://git-scm.com/downloads" target="_blank"
+            >Download Git for all platforms</a
+          >
+        </li>
+        <li>Follow the installation instructions on your OS.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Configuring Git</h2>
+      <p>Set your name and email address:</p>
+      <code>git config --global user.name "Your Name"</code><br />
+      <code>git config --global user.email "you@example.com"</code>
+      <p>
+        <img
+          src="images/git-config.png"
+          alt="Git configuration commands"
+          width="500px"
+          title="Configuring Git"
+        />
+      </p>
+    </section>
+    <section>
+      <h2>Get Started</h2>
+      <p>
+        Create a folder for your project and an <code>index.html</code> file.
+        You can use any code editor like VS Code ,Webstorm or Atom (code editor
+        of your choice).
+      </p>
+    </section>
+    <section>
+      <h2>Initializing a Git Repository</h2>
+      <p>A Git repository stores your code and version history.</p>
+      <li>first check if you have initialized git or not</li>
+      <code>git status</code>
+      <p>
+        <img
+          src="/images/git-status.png"
+          alt="check git status"
+          title="check git status"
+          width="500px"
+        />
+      </p>
+      <code>git init</code>
+      <p>
+        <img
+          src="images/git-init.png"
+          alt="Initializing a git repository"
+          width="500px"
+          title="Initializing a git repository"
+        />
+      </p>
+    </section>
+
+    <section>
+      <h2>Adding Files to the Staging Area</h2>
+      <p>The staging area is where changes are prepared before committing.</p>
+      <code>git add filename</code><br />
+      <code>git add .</code>
+      <p>
+        Tracked files are already in Git’s version history; untracked files are
+        new and not yet added.
+      </p>
+      <p>
+        <img
+          src="images/git-add.png"
+          alt="Git add command"
+          width="500px"
+          title="adding files to the staging area"
+        />
+      </p>
+    </section>
+
+    <section>
+      <h2>Committing Changes</h2>
+      <p>To save changes:</p>
+      <code>git commit -m "Add meaningful message"</code>
+      <p>
+        <img
+          src="/images/git-commit.png"
+          alt="git-commit"
+          width="500px"
+          title="commiting changes"
+        />
+      </p>
+      <p>View commits:</p>
+      <code>git log</code>
+      <p>Return to a previous commit:</p>
+      <code>git checkout [commit-hash]</code>
+      <p>
+        <img
+          src="images/git-log.png"
+          alt="Git log command"
+          width="500px"
+          title="logging the commits"
+        />
+      </p>
+    </section>
+
+    <section>
+      <h2>Branches</h2>
+      <p>
+        Branches let you work on different features or fixes separately. The
+        main branch is usually called <code>main</code>.
+      </p>
+    </section>
+
+    <section>
+      <h2>Creating a Branch</h2>
+      <code>git branch newBranch</code>
+      <p>
+        <img
+          src="images/git-branch-create.png"
+          alt="Create a branch"
+          width="500px"
+          title="Create a branch"
+        />
+      </p>
+    </section>
+
+    <section>
+      <h2>Viewing All Branches</h2>
+      <code>git branch</code>
+      <p>The current branch is marked with <code>*</code>.</p>
+      <p>
+        <img
+          src="images/git-branch-view.png"
+          alt="View all branches"
+          width="500px"
+          title="view branches"
+        />
+      </p>
+    </section>
+
+    <section>
+      <h2>Switching Active Branches</h2>
+      <code>git checkout branch-name</code>
+      <p><img src="images/git-checkout.png" alt="Switch branches" /></p>
+    </section>
+
+    <section>
+      <h2>Merging a Branch</h2>
+      <p>First, switch to the branch you want to merge into (usually main):</p>
+      <code>git checkout main</code><br />
+      <code>git merge new-feature</code>
+      <p>
+        <img src="images/git-merge.png" alt="Merge a branch" width="500px" />
+      </p>
+    </section>
+
+    <section>
+      <h2>Deleting a Branch</h2>
+      <code>git branch -d branch-name</code>
+      <p>
+        <img
+          src="images/git-delete-branch.png"
+          alt="Delete a branch"
+          width="500px"
+        />
+      </p>
+    </section>
+  </body>
+</html>
