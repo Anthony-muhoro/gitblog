@@ -8,23 +8,25 @@
   <body>
     <h1><u>Everyday Git</u></h1>
 
-    <section>
+    <div>
       <h2>What is Git</h2>
       <p>
-        Git is a distributed version control system. A version control system
-        helps track changes in source code during software development. It
-        allows multiple developers to collaborate efficiently.
+        Git is a tool that helps you save different versions of your work. It is
+        mostly used by people who write code. If you make a mistake, you can go
+        back to an earlier version.
       </p>
       <p>
-        Other version control systems include SVN, Mercurial, and Perforce. This
-        blog focuses on Git and GitHub.
+        Other tools like Git are SVN, Mercurial, and Perforce. But in this blog,
+        we will only talk about Git and GitHub.
       </p>
       <a href="https://git-scm.com/doc" target="_blank">Git Documentation</a>
-    </section>
+    </div>
 
-    <section>
+    <div>
       <h2>Installing Git</h2>
-      <p>Check if Git is installed:</p>
+      <p>
+        To check if Git is already on your computer, type this in your terminal:
+      </p>
       <code>git --version</code>
       <p>
         <img
@@ -34,20 +36,22 @@
           title="check if git is installed"
         />
       </p>
-      <p>To install Git:</p>
+      <p>To install Git, click the link below:</p>
       <ul>
         <li>
           <a href="https://git-scm.com/downloads" target="_blank"
-            >Download Git for all platforms</a
+            >Download Git</a
           >
         </li>
-        <li>Follow the installation instructions on your OS.</li>
+        <li>
+          Then follow the steps for your computer (Windows, Mac, or Linux).
+        </li>
       </ul>
-    </section>
+    </div>
 
-    <section>
-      <h2>Configuring Git</h2>
-      <p>Set your name and email address:</p>
+    <div>
+      <h2>Setting Up Git</h2>
+      <p>Type these commands to tell Git your name and email:</p>
       <code>git config --global user.name "Your Name"</code><br />
       <code>git config --global user.email "you@example.com"</code>
       <p>
@@ -58,19 +62,20 @@
           title="Configuring Git"
         />
       </p>
-    </section>
-    <section>
+    </div>
+
+    <div>
       <h2>Get Started</h2>
       <p>
-        Create a folder for your project and an <code>index.html</code> file.
-        You can use any code editor like VS Code ,Webstorm or Atom (code editor
-        of your choice).
+        Create a folder for your work. Inside that folder, make a file named
+        <code>index.html</code>. You can use any code editor like VS Code or any
+        tool you like.
       </p>
-    </section>
-    <section>
-      <h2>Initializing a Git Repository</h2>
-      <p>A Git repository stores your code and version history.</p>
-      <li>first check if you have initialized git or not</li>
+    </div>
+
+    <div>
+      <h2>Start Using Git</h2>
+      <p>To see if Git is active in your folder, type:</p>
       <code>git status</code>
       <p>
         <img
@@ -80,6 +85,7 @@
           width="500px"
         />
       </p>
+      <p>If it's not active yet, type:</p>
       <code>git init</code>
       <p>
         <img
@@ -89,16 +95,16 @@
           title="Initializing a git repository"
         />
       </p>
-    </section>
+    </div>
 
-    <section>
-      <h2>Adding Files to the Staging Area</h2>
-      <p>The staging area is where changes are prepared before committing.</p>
+    <div>
+      <h2>Get Your Files Ready to Save</h2>
+      <p>To tell Git which files to save, type:</p>
       <code>git add filename</code><br />
       <code>git add .</code>
       <p>
-        Tracked files are already in Git’s version history; untracked files are
-        new and not yet added.
+        Files Git knows are called "tracked". New files are called "untracked"
+        until you add them.
       </p>
       <p>
         <img
@@ -108,12 +114,12 @@
           title="adding files to the staging area"
         />
       </p>
-    </section>
+    </div>
 
-    <section>
-      <h2>Committing Changes</h2>
-      <p>To save changes:</p>
-      <code>git commit -m "Add meaningful message"</code>
+    <div>
+      <h2>Save Your Work (Commit)</h2>
+      <p>To save a snapshot of your work, type:</p>
+      <code>git commit -m "Write a short message here"</code>
       <p>
         <img
           src="/images/git-commit.png"
@@ -122,9 +128,9 @@
           title="commiting changes"
         />
       </p>
-      <p>View commits:</p>
+      <p>To see your saved snapshots, type:</p>
       <code>git log</code>
-      <p>Return to a previous commit:</p>
+      <p>To go back to an old version, type:</p>
       <code>git checkout [commit-hash]</code>
       <p>
         <img
@@ -134,18 +140,18 @@
           title="logging the commits"
         />
       </p>
-    </section>
+    </div>
 
-    <section>
-      <h2>Branches</h2>
+    <div>
+      <h2>What are Branches</h2>
       <p>
-        Branches let you work on different features or fixes separately. The
+        Branches help you try new ideas without messing up the main work. The
         main branch is usually called <code>main</code>.
       </p>
-    </section>
+    </div>
 
-    <section>
-      <h2>Creating a Branch</h2>
+    <div>
+      <h2>Make a New Branch</h2>
       <code>git branch newBranch</code>
       <p>
         <img
@@ -155,12 +161,14 @@
           title="Create a branch"
         />
       </p>
-    </section>
+    </div>
 
-    <section>
-      <h2>Viewing All Branches</h2>
+    <div>
+      <h2>See All Branches</h2>
       <code>git branch</code>
-      <p>The current branch is marked with <code>*</code>.</p>
+      <p>
+        The branch with <code>*</code> next to it is the one you are working on.
+      </p>
       <p>
         <img
           src="images/git-branch-view.png"
@@ -169,26 +177,26 @@
           title="view branches"
         />
       </p>
-    </section>
+    </div>
 
-    <section>
-      <h2>Switching Active Branches</h2>
+    <div>
+      <h2>Switch to Another Branch</h2>
       <code>git checkout branch-name</code>
       <p><img src="images/git-checkout.png" alt="Switch branches" /></p>
-    </section>
+    </div>
 
-    <section>
-      <h2>Merging a Branch</h2>
-      <p>First, switch to the branch you want to merge into (usually main):</p>
+    <div>
+      <h2>Join (Merge) Branches</h2>
+      <p>First go to the branch you want to keep as main:</p>
       <code>git checkout main</code><br />
       <code>git merge new-feature</code>
       <p>
         <img src="images/git-merge.png" alt="Merge a branch" width="500px" />
       </p>
-    </section>
+    </div>
 
-    <section>
-      <h2>Deleting a Branch</h2>
+    <div>
+      <h2>Remove a Branch</h2>
       <code>git branch -d branch-name</code>
       <p>
         <img
@@ -197,6 +205,6 @@
           width="500px"
         />
       </p>
-    </section>
+    </div>
   </body>
 </html>
