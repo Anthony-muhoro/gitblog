@@ -6,4 +6,4 @@
 
 ## 3.Frankline Kober - 676866
 
-## 4. Jabez Ayugu - Jabsaayugu
+## 4. Jabez Ayugu - Jaabsaayugu
