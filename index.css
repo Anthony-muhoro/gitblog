@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;600;700&display=swap");
 
 :root {
-  --blue: #2E41AD;
+  --blue: #2e41ad;
   --black: #000;
   --white: #fff;
 }
@@ -10,10 +10,11 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-size: 16px;
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   /* background-color: ; */
   color: #222;
   line-height: 1.6;
@@ -21,8 +22,8 @@ body {
 }
 
 .intro-container {
-  padding-left: 6rem;
-  padding-right: 6rem;
+  /* padding-left: 6rem;
+  padding-right: 6rem; */
   margin: auto;
   background: #f9f9f9;
   padding: 2rem;
@@ -34,8 +35,7 @@ body {
   text-align: center;
   color: var(--white);
   background-color: var(--blue);
-  
- margin-bottom: 2rem;
+  margin-bottom: 2rem;
   font-size: 2.2rem;
   position: fixed;
   top: 0;
@@ -51,7 +51,7 @@ body {
 }
 
 .intro-container p {
-  margin-bottom: 1rem;
+  /* margin-bottom: 1rem; */
   font-size: 1rem;
 }
 
@@ -75,12 +75,12 @@ body {
   color: crimson;
 }
 
-.intro-container code {
+.intro-container code,
+.setting-up code,
+.get-started code {
   display: block;
   background: #efefef;
   padding: 0.5rem;
-  padding-left: 10px;
-  padding-right: 20px;
   margin: 1rem 0;
   border-radius: 6px;
   font-family: monospace;
@@ -88,7 +88,7 @@ body {
   font-weight: bold;
   width: fit-content;
 }
-.intro-container code:hover{
+.intro-container code:hover {
   background-color: white;
   color: gray;
 }
@@ -107,4 +107,45 @@ body {
   margin-top: 0.5rem;
   font-size: 0.9rem;
   color: #666;
+}
+
+.setting-up,
+.get-started {
+  padding: 0 32px 32px 32px;
+}
+
+.setting-up h2,
+.get-started h2 {
+  font-size: 25px;
+}
+
+.setting-up h2,
+.get-started h2,
+.get-started h3 {
+  color: var(--blue);
+}
+
+#email {
+  margin-top: 0;
+}
+
+.get-started h3 {
+  padding-top: 20px;
+  font-size: 20px;
+}
+
+.setting-up img,
+.get-started img {
+  max-width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  margin: 12px;
+}
+
+.get-started figcaption,
+.setting-up figcaption {
+  margin: 0 8px 8px 12px;
+  font-size: 14px;
+  color: #a0a0a0;
+  font-style: italic;
 }
