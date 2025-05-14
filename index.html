@@ -147,104 +147,141 @@
   
 </div>
 
-  <div>
-    <h2>5. Get Your Files Ready to Save (Staging)</h2>
+  <div class="frankit">
+        <h2>6. Save Your Work (Commit)</h2>
 
-    <p>
-      After you create or modify files in your project, Git doesn't
-      automatically save them. Instead, Git uses something called the
-      <strong>staging area</strong> (also known as the <em>index</em>) to help
-      you choose which changes to save (commit) next.
-    </p>
+        <p>
+          Once you've added files to the staging area, it's time to save your
+          work in Git. This saved snapshot is called a <strong>commit</strong>.
+        </p>
 
-    <p>
-      Think of the staging area as a preparation zone. You tell Git: "These
-      are the changes I want to include in my next save."
-    </p>
+        <h3>Making a Commit</h3>
+        <p>Use the following command to commit your staged changes:</p>
+        <code>git commit -m "Write a short message here"</code>
 
-    <h3>Tracked vs Untracked Files</h3>
-    <ul>
-      <li>
-        <strong>Untracked Files:</strong> Files Git is not yet monitoring.
-        These are usually new files you've just created.
-      </li>
-      <li>
-        <strong>Tracked Files:</strong> Files Git is already watching. Changes
-        in these files will show up when you check status, and you can stage
-        them.
-      </li>
-    </ul>
+        <p>
+          The message inside the quotes should briefly describe the purpose of
+          the changes. A good commit message helps both you and your teammates
+          understand the history of the project.
+        </p>
 
-    <h3>Adding Files to the Staging Area</h3>
-    <p>You can add individual files like this:</p>
-    <code>git add filename</code>
+        <h4>Writing Great Commit Messages</h4>
+        <ul>
+          <li>
+            Use the present tense: e.g <code>Fix bug</code> not
+            <code>Fixed bug</code>
+          </li>
+          <li>
+            Keep it short and clear: eg <code>Add login form validation</code>
+          </li>
+          <li>Explain why the change was made if necessary.</li>
+        </ul>
 
-    <p>Or, add all changes in the current directory and subfolders:</p>
-    <code>git add .</code>
+        <p>
+          Example:
+          <br />
+          <code>git commit -m "initial commit"</code>
+        </p>
 
-    <p>Another way to add specific file types:</p>
-    <code>git add *.html</code> adds all HTML files.
+        <figure>
+          <img
+            src="images/git-commit.png"
+            alt="Git commit command"
+            width="500px"
+            title="Committing changes in Git"
+          />
+          <figcaption>Screenshot: Committing changes in Git</figcaption>
+        </figure>
+      </div>
+<div class="franko">
+      <h3>Alternative Way to Write Detailed Commit Messages</h3>
+      <p>Instead of using the <code>-m</code> option, you can simply type:</p>
+      <code>git commit</code>
 
-    <p>Or to interactively choose files to stage:</p>
-    <code>git add -p</code> — lets you go through each change and choose
-    whether to stage it.
+      <p>
+        This will open your default text editor (such as <strong>Vim</strong>,
+        <strong>Nano</strong>, or <strong>VS Code</strong>). Inside the editor:
+      </p>
+      <p>
+        This method is preferred in larger teams and open-source projects
+        because it improves the clarity and professionalism of your commit
+        history.
+      </p>
+      <h3>Configure VS Code as Your Git Commit Editor</h3>
+      <p>
+        By default, Git might open editors like Vim or Nano when writing commit
+        messages. If you prefer using Visual Studio Code, you can set it as your
+        default Git editor with:
+      </p>
+      <code>git config --global core.editor "code --wait"</code>
+      <p>
+        The <code>--wait</code> flag tells Git to pause until you're done
+        writing and saving the commit message in VS Code.
+      </p>
 
-    <p>Here's an example of adding files using <code> git add .</code></p>
+      <p>
+        After running <code>git commit</code>, VS Code will launch, allowing you
+        to write:
+      </p>
+      <ol>
+         <li>   A short and meaningful title on the first line</li>
+        <li>    A blank line</li>
+        <li>    A detailed description of the changes</li>
+      </ol>
 
-    <figure>
-      <img src="images/git-add.png" alt="Git add command" width="500px"
-        title="Adding files to the staging area using git add" />
-      <figcaption>Screenshot: Adding files to the staging area using git add</figcaption>
-    </figure>
+      <p>Example commit message inside VS Code:</p>
+      <pre>
+Fix crash when user submits empty form
+The crash occurred because input validation wasn't applied on
+empty fields. Added client-side and server-side validation logic
+and updated the error messaging system.
+</pre
+      >
 
-    <p>
-      Once you've staged the changes, Git is now ready to commit them. Staged
-      changes are like "files selected to be saved." If you forget to stage
-      something, it won't be saved in the next commit.
-    </p>
-  </div>
+      <h3>View Past Commits</h3>
+      <p>To see a history of all your commits, use:</p>
+      <code>git log</code>
 
-  <div>
-    <h2>6. Save Your Work (Commit)</h2>
+      <p>
+        This command shows a list of all commits, their authors, timestamps, and
+        unique commit hashes.
+      </p>
 
-    <p>
-      Once you've added files to the staging area, it's time to save your work
-      in Git. This saved snapshot is called a <strong>commit</strong>.
-    </p>
+      <figure>
+        <img
+          src="images/git-log.png"
+          alt="Git log command"
+          width="500px"
+          title="Logging the commits"
+        />
+        <figcaption>Screenshot: Viewing commit history with git log</figcaption>
+      </figure>
 
-    <h3>Making a Commit</h3>
-    <p>Use the following command to commit your staged changes:</p>
-    <code>git commit -m "Write a short message here"</code>
+      <h3>Go Back to a Specific Commit</h3>
+      <p>
+        Each commit in Git has a unique ID (called a
+        <strong>commit hash</strong>). You can temporarily go back to that point
+        using:
+      </p>
+      <code>git checkout [commit-hash]</code>
 
-    <p>
-      The message inside the quotes should briefly describe the purpose of the
-      changes. A good commit message helps both you and your teammates
-      understand the history of the project.
-    </p>
+      <p>
+        Example:
+        <br />
+        <code>git checkout a1b2c3d4</code>
+      </p>
 
-    <h4>Writing Great Commit Messages</h4>
-    <ul>
-      <li>
-        Use the present tense: e.g <code>Fix bug</code> not
-        <code>Fixed bug</code>
-      </li>
-      <li>
-        Keep it short and clear: eg <code>Add login form validation</code>
-      </li>
-      <li>Explain why the change was made if necessary.</li>
-    </ul>
+      <h4>!!! Note:</h4>
+      <p>
+        This puts you in a <strong>detached HEAD</strong> state — meaning you're
+        no longer on a branch. If you make changes here and want to keep them,
+        create a new branch:
+      </p>
+      <code>git checkout -b new-branch-name</code>
 
-    <p>
-      Example:
-      <br />
-      <code>git commit -m "initial commit"</code>
-    </p>
-
-    <figure>
-      <img src="images/git-commit.png" alt="Git commit command" width="500px" title="Committing changes in Git" />
-      <figcaption>Screenshot: Committing changes in Git</figcaption>
-    </figure>
-  </div>
+      <p>To return to the latest commit on your main branch, use:</p>
+      <code>git checkout main</code>
+    </div>
 
   <h3>Alternative Way to Write Detailed Commit Messages</h3>
   <p>Instead of using the <code>-m</code> option, you can simply type:</p>
